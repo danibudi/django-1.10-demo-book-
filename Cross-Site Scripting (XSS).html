@@ -1,0 +1,12 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+ <title>Cross-Site Scripting (XSS)</title>
+</head>
+<body>
+ <h2>Cross-Site Scripting (XSS)- How it works</h2>
+ 
+<script>alert(42)</script>
+<p><a href="http://127.0.0.1:8000/good_example/?title=%3Cscript%3Ealert%2842%29%3C/script%3E">Click here to see solution of problem</a></p>
+
+
+</body></html>

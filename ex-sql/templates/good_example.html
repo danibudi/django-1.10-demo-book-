@@ -1,0 +1,25 @@
+<html>
+<head>
+ <title>SQL Injection</title>
+</head>
+<body>
+ <h2>SQL Injection- How to avoid</h2>
+ 
+ <p>The value of "title" parameter in query string is "' OR 'a'='a" <br /><br />
+ <code>
+ Code:<br />
+ qry = "SELECT * FROM books_book WHERE title=%s"<br />
+ book = Book.objects.raw(qry, [title])<br /><br />
+ </code>
+Now %s will automatically escape
+</p>
+<hr />
+<b>Book</b>
+
+ {% for b in book%}
+  <li>{{b.title}}</li>
+ {% endfor%}
+ </ol>
+<p><a href="/?title=' OR 'a'='a">Click here to see how  SQL Injection works</a></p>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<html>
+<head>
+ <title>Cross-Site Scripting (XSS)</title>
+</head>
+<body>
+ <h2>Cross-Site Scripting (XSS)- How to avoid</h2>
+ 
+{{title}}
+<p><a href="/?title=<script>alert(42)</script>">Click here to see bad example</a></p>
+</body>
+</html>
